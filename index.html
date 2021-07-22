@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="src/script.js"></script>
     <title>Paramount Lading Page</title>
 </head>
 
 
 
-<body class="grey-background">
+<body class="blue-gradient-background-alternative">
     <!-- Gradient Blue Start -->
     <div class="blue-gradient-background">
         <section class="section-header">
             <ul class="ul-header-logos">
-                <li></li>
-                <li></li>
-                <li></li>
+                <a href="#" target="_blank"><li></li></a>
+                <a href="https://www.a-league.com.au/" target="_blank"><li></li></a>
+                <a href="https://www.w-league.com.au/" target="_blank"><li></li></a>
             </ul>
 
             <h1>Enjoy a mountain of football exclusively on paramount+</h1>
             <div class="soccerballs-image">
-                <img src="./../img/soccerballs-shadow.png">
-                <img src="./../img/soccerballs.png">
+                <img src="./img/soccerballs-shadow.png">
+                <img src="./img/soccerballs.png">
             </div>
         </section>
 
@@ -36,33 +35,33 @@
         </section>
 
         <section class="section-form">
-            <form class="email-form">
+            <form class="email-form" id="email-subscribe">
 
                 <div class="form-group">
                     <input type="text" class="form-entry" id="first-name" placeholder="First name*" />
-                    <div class="invalid-feedback">Name must be between 2 and 10 characters</div>
+                    <div class="invalid-feedback no-display">First name must be between 2 and 10 characters</div>
                 </div>
 
                 <div class="form-group">
                     <input type="text" class="form-entry" id="last-name" placeholder="Last name*" />
-                    <div class="invalid-feedback">Name must be between 2 and 10 characters</div>
+                    <div class="invalid-feedback no-display">Last name must be between 2 and 10 characters</div>
                 </div>
 
                 <div class="form-group">
                     <input type="text" class="form-entry" id="email" placeholder="Email*" />
-                    <div class="invalid-feedback">Enter a valid email</div>
+                    <div class="invalid-feedback no-display">Enter a valid email</div>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-entry" id="phone" placeholder="Mobile (optional)" />
-                    <div class="invalid-feedback">Enter a valid phone</div>
+                    <input type="text" class="form-entry" id="mobile" placeholder="Mobile (optional)" />
+                    <div class="invalid-feedback no-display">Enter a valid phone</div>
                 </div>
 
                 <div class="checkbox-group">
 
-                    <input type="checkbox" id="TermsConditions" name="TermsConditions-name" value="Bike" />
+                    <input type="checkbox" required id="TermsConditions-checkbox" name="TermsConditions-name" value="ReadTermsConditions" />
 
-                    <label for="TermsConditions">
+                    <label for="TermsConditions-checkbox">
                         I have read and accept the Terms & Conditions
                     </label>
 
@@ -70,40 +69,63 @@
 
                 <br>
 
-                <input type="submit" value="Sign Up" class="button" />
+                <input type="submit" id="submit-email-button" value="Sign Up" class="button half-button" />
+                <div class="invalid-feedback-submit no-display" id="submit-feedback">Please enter valid email</div>
             </form>
+
+        </section>
+
+        <hr>
+
+        <section class="section-form">
+            <form class="email-form" id="email-trial-form">
+
+                <p>If you’ve already registered but lost your free trial code, please enter your email below and we’ll resent it:</p>                     
+
+
+                <div class="form-group form-third">
+                    <input type="text" class="form-entry" id="email-trial" placeholder="Email*" />
+                    <div class="invalid-feedback no-display">Enter a valid email</div>
+                </div>
+
+                <div class="form-group form-single">
+                    <input type="submit" value="Submit" id='email-trial-submit' class="button" />
+                    <div class="invalid-feedback no-display" id="trial-feedback">Enter a valid email</div>
+                </div>
+                
+            </form>
+
         </section>
 
         <hr>
 
         <section class="section-players">
-            <h3>With Paramount+ you’ll enjoy exclusive access to every single <nobr>A-LEAGUE</nobr> and WESTFIELD
-                W-league match.</h3>
+            <h3>With Paramount+ you’ll enjoy exclusive access to every single <nobr>A-LEAGUE</nobr>, <nobr>W-LEAGUE</nobr>, and <nobr>socceroos</nobr> match from the start of the 2021/22 season.</h3>
             <p>Plus, you can catch the best of Aussie football including Socceroos, Matildas and
                 FFA Cup matches. A mountain of football content streamed straight to your home.</p>
             <div class="soccerplayers-image">
-                <img src="./../img/soccer-players.png">
+                <img src="./img/soccer-players.png">
             </div>
         </section>
     </div>
     <!-- Gradient Blue End -->
 
     <section class="section-members white-background">
-        <h3 class="blue">Club members also score discounted <nobr>12-month</nobr> subscriptions</h3>
+        <h3 class="blue">Club members also score exclusive club offer</h3>
         <ul class="ul-member-logos">
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
-            <li><a href="#">MEMBER INFO</a></li>
+            <li><a href="https://adelaideunited.memberlink.net.au/memberhome" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://roar.memberlink.net.au/memberhome#home" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://www.canberraunited.com.au/membership" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://ccmariners.memberlink.net.au/memberhome" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://membership.macarthurfc.com.au/" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://www.citymembership.com.au/" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://gomvfc.com.au/" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://am.ticketmaster.com/newcastlejets/#/" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://premier.sportsubs.com.au/aleague/perthglory/products?productcategoryid=1&_ga=2.211626259.728133864.1566871873-624003209.1566871873" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://my.sydneyfc.com/home" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://www.wellingtonphoenix.com/contact-us" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://www.wanderland.com.au/" target="_blank">MEMBER INFO</a></li>
+            <li><a href="https://wufc.memberlink.net.au/memberhome" target="_blank">MEMBER INFO</a></li>
         </ul>
     </section>
 
@@ -138,19 +160,29 @@
 
         <section class="section-email-a-question">
             <h3>Don’t see what you need?</h3>
-            <a href="#">Email a question</a>
+            <a href="mailto:help@aplfootball.com.au?subject=A question from the site">Email a question</a>
         </section>
 
     </div>
         <section class="section-footer light-blue-background">
             <ul class="ul-footer-logos">
+                <a href="#" target="_blank"><li></li></a>
                 <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <a href="https://www.a-league.com.au/" target="_blank"><li></li></a>
+                <a href="https://www.w-league.com.au/" target="_blank"><li></li></a>
             </ul>
         </section>
     
 </body>
+
+    <!-- GA Tracking -->
+    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-820669-3></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-820669-3');
+    </script>
+<script src="src/script.js"></script>
 
 </html>
