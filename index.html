@@ -16,7 +16,7 @@
     <div class="blue-gradient-background">
         <section class="section-header">
             <ul class="ul-header-logos">
-                <a href="#" target="_blank"><li></li></a>
+                <a href="https://www.paramountplus.com/intl/" target="_blank"><li></li></a>
                 <a href="https://www.a-league.com.au/" target="_blank"><li></li></a>
                 <a href="https://www.w-league.com.au/" target="_blank"><li></li></a>
             </ul>
@@ -38,12 +38,12 @@
             <form class="email-form" id="email-subscribe">
 
                 <div class="form-group">
-                    <input type="text" class="form-entry" id="first-name" placeholder="First name*" />
+                    <input type="text" class="form-entry" id="first-name" placeholder="First name*"/>
                     <div class="invalid-feedback no-display">First name must be between 2 and 10 characters</div>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-entry" id="last-name" placeholder="Last name*" />
+                    <input type="text" class="form-entry" id="last-name" placeholder="Last name*"/>
                     <div class="invalid-feedback no-display">Last name must be between 2 and 10 characters</div>
                 </div>
 
@@ -53,16 +53,16 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-entry" id="mobile" placeholder="Mobile (optional)" />
+                    <input type="number" class="form-entry" id="mobile" placeholder="Mobile (optional)" />
                     <div class="invalid-feedback no-display">Enter a valid phone</div>
                 </div>
 
                 <div class="checkbox-group">
 
-                    <input type="checkbox" required id="TermsConditions-checkbox" name="TermsConditions-name" value="ReadTermsConditions" />
+                    <input type="checkbox" id="TermsConditions-checkbox" name="TermsConditions-name" value="ReadTermsConditions" />
 
                     <label for="TermsConditions-checkbox">
-                        I have read and accept the Terms & Conditions
+                        I have read and accept the <a href="https://www.a-league.com.au/sites/aleague/files/2020-10/A%20League%20Membership%20survey%20Terms%20and%20Conditions%20%282%29.pdf" target="_blank">Terms & Conditions</a>
                     </label>
 
                 </div>
@@ -70,14 +70,14 @@
                 <br>
 
                 <input type="submit" id="submit-email-button" value="Sign Up" class="button half-button" />
-                <div class="invalid-feedback-submit no-display" id="submit-feedback">Please enter valid email</div>
+                <div class="invalid-feedback-submit no-display" id="submit-feedback"></div>
             </form>
 
         </section>
 
         <hr>
 
-        <section class="section-form">
+        <section class="section-form no-display">
             <form class="email-form" id="email-trial-form">
 
                 <p>If you’ve already registered but lost your free trial code, please enter your email below and we’ll resent it:</p>                     
@@ -85,19 +85,20 @@
 
                 <div class="form-group form-third">
                     <input type="text" class="form-entry" id="email-trial" placeholder="Email*" />
-                    <div class="invalid-feedback no-display">Enter a valid email</div>
+                    <div class="invalid-feedback no-display" id="trial-email-feedback"></div>
                 </div>
 
                 <div class="form-group form-single">
                     <input type="submit" value="Submit" id='email-trial-submit' class="button" />
-                    <div class="invalid-feedback no-display" id="trial-feedback">Enter a valid email</div>
+                    <div class="invalid-feedback no-display" id="trial-feedback"></div>
                 </div>
                 
             </form>
 
+        <hr>
+
         </section>
 
-        <hr>
 
         <section class="section-players">
             <h3>With Paramount+ you’ll enjoy exclusive access to every single <nobr>A-LEAGUE</nobr>, <nobr>W-LEAGUE</nobr>, and <nobr>socceroos</nobr> match from the start of the 2021/22 season.</h3>
@@ -134,28 +135,54 @@
         <section class="section-faq">
             <h3>FAQ’S</h3>
             <details>
-                <summary>How many times can I receive the 14-day trial offer?</summary>
+                <summary>When will my subscription start?</summary>
                 <div class="faq-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor suscipit, iure tenetur eveniet,
-                        vero tempore delectus? Perferendis, quisquam ullam consequuntur.</p>
+                    <p>Once you have redeemed your code and created your Paramount + account, your subscription will be activated. Codes will be sent when Paramount+ launches on Wednesday August 11th.</p>
                 </div>
             </details>
 
             <details>
-                <summary>I haven’t received my code yet, what should I do?</summary>
+                <summary>What content is available on Paramount+?</summary>
                 <div class="faq-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor suscipit, iure tenetur eveniet,
-                        vero tempore delectus? Perferendis, quisquam ullam consequuntur.</p>
+                    <p>It’s the only place to catch every match of every round of the A-League and W-League… whenever you want, wherever you want. From the start of the 2021/22 Seasons, enjoy the best of Australian football all in one place, including the Socceroos, Matildas, FFA Cup matches. When Paramount+ launches on August 11th you can access some of the world’s biggest brands including Showtime, Paramount + Originals, MTV, Nickelodeon, Comedy Central, Smithsonian Channel, CBS and more.</p>
                 </div>
             </details>
 
             <details>
-                <summary>How long is my code valid for?</summary>
+                <summary>How many devices can I watch Paramount+ on at the same time?</summary>
                 <div class="faq-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor suscipit, iure tenetur eveniet,
-                        vero tempore delectus? Perferendis, quisquam ullam consequuntur.</p>
+                    <p>There are 3 concurrent HD streams included in the monthly and annual subscription.</p>
                 </div>
             </details>
+
+            <details>
+                <summary>Do I have to pay any money now?</summary>
+                <div class="faq-content">
+                    <p>No, as a football fan you are entitled to a 14-day free trial. Once the 14 days are up you will be charged monthly or annually.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>What if I have questions that are not listed here?</summary>
+                <div class="faq-content">
+                    <p>Please contact <a href="mailto:help@aplfootball.com.au?subject=A question from the site">help@aplfootball.com.au</a></p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I submitted my subscription, but I didn’t receive a redemption code.</summary>
+                <div class="faq-content">
+                    <p>Codes will be sent after Paramount+ has launches on Wednesday August 11th. If you have not received your code after this date please check your junk mail. If you still have not received it, please click here to resend it.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Where can I find the Privacy Policy for this offer?</summary>
+                <div class="faq-content">
+                    <p>You can find the Privacy Policy here.</p>
+                </div>
+            </details>
+          
         </section>
 
         <section class="section-email-a-question">
@@ -166,7 +193,7 @@
     </div>
         <section class="section-footer light-blue-background">
             <ul class="ul-footer-logos">
-                <a href="#" target="_blank"><li></li></a>
+                <a href="https://www.paramountplus.com/intl/" target="_blank"><li></li></a>
                 <li></li>
                 <a href="https://www.a-league.com.au/" target="_blank"><li></li></a>
                 <a href="https://www.w-league.com.au/" target="_blank"><li></li></a>

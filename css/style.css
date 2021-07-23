@@ -66,6 +66,12 @@ h3 {
     padding: var(--padding-default);
 }
 
+a {
+    text-decoration: underline;
+    color: #fff;
+
+}
+
 
 /* COLORS */
 
@@ -87,6 +93,14 @@ body {
 
 .light-blue-background {
     background-color: var(--blue);
+}
+
+.invalid {
+    outline: 2px solid red !important;
+}
+
+.disable-button {
+    pointer-events: none;
 }
 
 .blue-gradient-background-alternative {
@@ -432,7 +446,7 @@ summary {
     font-weight: 600;
     background-color: #fff;
     color: #333;
-    padding: 1em 2.5em 1em 1.5em;
+    padding: 1em 4em 1em 1.5em;
     margin-bottom: 1em;
     outline: none;
     text-align: left;
@@ -450,7 +464,6 @@ details > summary::marker {
     content: "";
 }
 
-
 details > summary::after {
 position: absolute;
 top: 0;
@@ -458,6 +471,12 @@ content: "+";
 font-size: 2.5em;
 color: var(--blue);
 right: 15px;
+right: 20px;
+height: 100%;
+display:flex;
+flex-direction:row;
+align-items: center;
+justify-content: center;
 }
 
 details[open] > summary::after {
@@ -465,8 +484,12 @@ position: absolute;
 content: "-";
 font-size: 2.2em;
 color: var(--blue);
-right: 20px;
-
+top: -3px;
+right: 25px;
+display:flex;
+flex-direction:row;
+align-items: center;
+justify-content: center;
 }
 
 details > summary::-webkit-details-marker {
