@@ -271,6 +271,9 @@ function validateFirstName() {
     } else {
         firstNameFeedback.classList.add('no-display');
         firstName.classList.remove('invalid');
+        if (emailsubmitFeedback.innerHTML=="Please enter your first name"){
+            emailsubmitFeedback.innerHTML="";
+        };
     }
 
 }
@@ -284,6 +287,9 @@ function validateLastName() {
     } else {
         lastNameFeedback.classList.add('no-display');
         lastName.classList.remove('invalid');
+        if (emailsubmitFeedback.innerHTML=="Please enter your last name"){
+            emailsubmitFeedback.innerHTML="";
+        };
     }
 }
 
@@ -298,7 +304,10 @@ function validateEmail() {
     } else {
         emailFeedback.classList.add('no-display');
         email.classList.remove('invalid');
-        return(false);
+        if (emailsubmitFeedback.innerHTML=="Please enter a valid email address"){
+            emailsubmitFeedback.innerHTML="";
+        };
+        return(false);       
         }
 }
 
@@ -313,6 +322,7 @@ function validateEmailTrial() {
     } else {
         emailTrialFeedback.classList.add('no-display');
         emailTrial.classList.remove('invalid');
+        
         return(false);
     }
 
