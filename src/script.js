@@ -165,11 +165,12 @@ function passSignUpEmail(){
     console.log("Sending this json through post:" + JSON.stringify(data));
 
     // Post JSON to Paramount's API
-    submitNewEmail('https://0f21n2zlzg.execute-api.ap-southeast-2.amazonaws.com/Dev/register_interest', data);
+    submitNewEmail('https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/register_interest', data);
 }
 
 function passTrailEmail(){
     emailTrialButton.classList.add("disable-button");
+    emailsubmitFeedback.classList.remove('no-display');
     trailsubmitFeedback.innerHTML = "Sending your details..."
 
     const data2 = {
@@ -178,7 +179,7 @@ function passTrailEmail(){
 
     console.log("Sending this json through post:" + JSON.stringify(data2));
 
-    submitTrailEmail('https://0f21n2zlzg.execute-api.ap-southeast-2.amazonaws.com/Dev/register_trial_user', data2);
+    submitTrailEmail('https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/register_trial_user', data2);
 }
 
 function submitNewEmail(url, data) {
@@ -190,12 +191,34 @@ function submitNewEmail(url, data) {
         body: JSON.stringify(data)
     })
         .then((res) => res)
-        .then((data) => console.log(data))
-        .catch(err => {
-            emailsubmitFeedback.classList.remove('no-display');
-            emailsubmitFeedback.innerHTML = err;
-            console.error(err);
-        })
+        .then((data) => submitNewEmailSuccess(data))
+        .catch(err => submitNewEmailFailure(err))
+}
+
+function submitNewEmailSuccess(data){
+    console.log(data);
+    console.log(data.status);
+    if (data.status == 201){
+emailsubmitFeedback.classList.remove('no-display');
+emailsubmitFeedback.innerHTML = "Thank you. Your registration has been successful!<br>Your 14-day free trial redemption code will be sent to your inbox when Paramount+ launches on Wednesday, August 11th.<br><br>Make sure to check your Junk mail if you don’t receive."
+submitEmailButton.classList.remove("disable-button");
+    } else if (data.status == 409){
+        emailsubmitFeedback.classList.remove('no-display');
+        emailsubmitFeedback.innerHTML = "This email has already been registered."
+        submitEmailButton.classList.remove("disable-button");
+    } else {
+        submitNewEmailFailure(data)
+    }
+
+
+}
+
+function submitNewEmailFailure(err){
+    emailsubmitFeedback.classList.remove('no-display');
+    emailsubmitFeedback.innerHTML = "There was a problem with your registration. Please try again later."
+    submitEmailButton.classList.remove("disable-button");
+    console.error(err);
+
 }
 
 function submitTrailEmail(url, data) {
