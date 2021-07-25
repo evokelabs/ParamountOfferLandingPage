@@ -1,5 +1,5 @@
-// API Submit New Email Address: https://0f21n2zlzg.execute-api.ap-southeast-2.amazonaws.com/Dev/register_trial_user
-// API Resend Trial Offer: https://0f21n2zlzg.execute-api.ap-southeast-2.amazonaws.com/Dev/resend_trial_user_email
+// API Submit New Email Address: https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/register_interest
+// API Resend Trial Offer: https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/resend_trial_user_email
 
 //Set up DOM variables
 
@@ -152,8 +152,9 @@ function removeInvalid(){
 }
 
 function passSignUpEmail(){
-    submitEmailButton.classList.add("disable-button");
     emailsubmitFeedback.innerHTML = "Sending your details..."
+    emailsubmitFeedback.classList.remove('no-display');
+    submitEmailButton.classList.add("disable-button");
 
     const data = {
         first_name: firstNameString,
@@ -169,9 +170,9 @@ function passSignUpEmail(){
 }
 
 function passTrailEmail(){
-    emailTrialButton.classList.add("disable-button");
-    emailsubmitFeedback.classList.remove('no-display');
     trailsubmitFeedback.innerHTML = "Sending your details..."
+    emailTrialButton.classList.add("disable-button");
+    trailsubmitFeedback.classList.remove('no-display');
 
     const data2 = {
         email: emailString
@@ -179,7 +180,7 @@ function passTrailEmail(){
 
     console.log("Sending this json through post:" + JSON.stringify(data2));
 
-    submitTrailEmail('https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/register_trial_user', data2);
+    submitTrailEmail('https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/resend_trial_user_email', data2);
 }
 
 function submitNewEmail(url, data) {
