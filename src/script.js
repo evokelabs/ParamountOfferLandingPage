@@ -155,19 +155,49 @@ function passSignUpEmail(){
     emailsubmitFeedback.innerHTML = "Sending your details..."
     emailsubmitFeedback.classList.remove('no-display');
     submitEmailButton.classList.add("disable-button");
-
-    const data = {
+    var data = {
         first_name: firstNameString,
         last_name:  lastNameString,
         email: emailString,
-        mobile: mobileNumber 
+        mobile: mobileNumber
     };
+
+    data = Object.assign(data, URLQuerySearch());
+
+    console.log(data);
+
 
     console.log("Sending this json through post:" + JSON.stringify(data));
 
     // Post JSON to Paramount's API
     submitNewEmail('https://oeaok6yzq1.execute-api.ap-southeast-2.amazonaws.com/Dev/register_interest', data);
 }
+
+//URL PARAMTER SEARCH
+function URLQuerySearch() {
+    var pairs = window.location.search.substring(1).split("&"),
+      obj = {},
+      pair,
+      i;
+  
+    for ( i in pairs ) {
+      if ( pairs[i] === "" ) continue;
+  
+      pair = pairs[i].split("=");
+      if (pair[0].toLowerCase() == "referralclub"){
+        pair[0] = "referral_club"
+      }
+      else if (pair[0].toLowerCase() == "favouriteclub"){
+        pair[0] = "favourite_club";
+      }
+
+      obj[ decodeURIComponent( pair[0].toLowerCase() ) ] = decodeURIComponent( pair[1].toUpperCase() );
+    }
+  
+    return obj;
+  }
+
+console.log(URLQuerySearch());
 
 function passTrailEmail(){
     trailsubmitFeedback.innerHTML = "Sending your details..."
